@@ -27,59 +27,12 @@ object PermutationCipherDecrypter{
     return dictionaryOccurencies
   }
 
-  def computeDigramsIC(occurrencies: Seq[(String, Int)]) : Double = {
-    var FIchar = 0L
-    var dictionaryLength= 0L
-    for(element <- occurrencies){
-      FIchar += (element._2.toLong * (element._2.toLong -1))
-      dictionaryLength += element._2.toLong
-    }
-    var ICchar = FIchar.toDouble/(dictionaryLength*(dictionaryLength-1)).toDouble
-    return ICchar
-  }
-
-  def computeDigramsMIC(dictionaryOccurencies: Seq[(String, Int)], cipherTextOccurrencies: Seq[(String, Int)],
-                        dictionaryLength: Int, cipherTextLength: Int): Double ={
-    var IMC = 0L
-    var i = 0
-    while(i < 26*26) {
-      var fi=dictionaryOccurencies(i)._2
-      var fi2=cipherTextOccurrencies(i)._2
-      IMC += fi.toLong * fi2.toLong
-      i+=1
-    }
-    var newIMC= IMC.toDouble/(dictionaryLength.toLong * cipherTextLength.toLong).toDouble
-    return newIMC
-  }
-
   def computeLengthByOccurrencies(occurrencies: Seq[(Char, Int)]): Int ={
     var length=0
     for(element <- occurrencies){
       length += element._2
     }
     return length
-  }
-
-  def computeRandomKeyWithLenght(m :Int) :ListBuffer[Int] ={
-    var key = new ListBuffer[Int]()
-
-    for(i <- 0 until m){
-      key+=m-1-i
-    }
-
-    for(i <- 0 until m*2){
-      var r = scala.util.Random
-      var v1 = r.nextInt(m)
-      var v2 = r.nextInt(m)
-      while(v1 == v2){
-        v2 = r.nextInt(m)
-      }
-      var app = key(v1)
-      key(v1) = key(v2)
-      key(v2) = app
-    }
-
-    return key
   }
 
   def permutationDecryption(cipherText :String, key :ListBuffer[Int]) :String ={
@@ -98,7 +51,6 @@ object PermutationCipherDecrypter{
     var cipherTextMessagePath: String = args(0)
     var charactersPath: String = args(1)
     var digramsPath: String = args(2)
-    var iterations: Int = args(3).toInt
 
     var cipherTextMessage = Source.fromFile(cipherTextMessagePath).getLines.mkString
 
@@ -118,62 +70,91 @@ object PermutationCipherDecrypter{
     var dictionaryDigramsOccurencies = dictionaryDigramsOccurenciesMap.toSeq.sortBy(_._1)
 
     var M = -1
-    var m = 11
+    var m = 2
     var MIC = -1.0D
-    var dictionaryIC = computeDigramsIC(dictionaryDigramsOccurencies)
-    var k  = ListBuffer(0)
+    var k  = new ListBuffer[Int]()
     var cipherTextMessageLength = cipherTextMessage.length
     var dictionaryLength= computeLengthByOccurrencies(dictionaryCharOccurencies)
+    var plainText = ""
 
-    while(m < cipherTextMessageLength){
-      if(cipherTextMessageLength%m==0){
-        println(dictionaryIC)
-        println(m)
-        var tk = computeRandomKeyWithLenght(m)
-        var TMIC = -1.0D
-        var pos1 = 0
-        var pos2 = 1
-        for(i <- 0 until iterations){
-          var prevMIC = TMIC
-          var temporaryDecryption = permutationDecryption(cipherTextMessage, tk)
-          var temporaryDecryptionDigramOccurrencies = computeDigramsOccurrencies(cipherTextMessage)
-          TMIC = computeDigramsIC(temporaryDecryptionDigramOccurrencies)
-          //TMIC = computeDigramsMIC(dictionaryDigramsOccurencies, temporaryDecryptionDigramOccurrencies, dictionaryLength, cipherTextMessageLength)
-          //tk = computeNewKey(tk, TMIC, prevMIC, dictionaryIC, pos1, pos2)
-          //Compute NewKey
-          if(Math.abs(TMIC-dictionaryIC)<Math.abs(prevMIC-dictionaryIC)){
-            prevMIC=TMIC
-            pos1 = (pos1+1)%m
-            if(pos1 == pos2){
-              pos2 = (pos1+1)%m
-            }
-          }
-          else{
-            pos2 = (pos2+1)%m
-            if(pos1 == pos2){
-              pos1 = (pos1+1)%m
-              pos2 = (pos1+1)%m
-            }
-          }
-          var app = tk(pos1)
-          tk(pos1) = tk(pos2)
-          tk(pos2) = app
+    var pyupypu = Array.ofDim[Int](26,26)
+    for(i <- 0 until 26){
+      for(j <- 0 until 26){
+        var v1:Float = 0f
+        if(dictionaryCharOccurencies(i)._2 != 0 && dictionaryCharOccurencies(j)._2 !=0) {
+          v1 = (dictionaryDigramsOccurencies(i * 26 + j)._2.toFloat / dictionaryLength.toFloat) /
+            ((dictionaryCharOccurencies(i)._2.toFloat / dictionaryLength.toFloat) * (dictionaryCharOccurencies(j)._2.toFloat / dictionaryLength.toFloat))
         }
-        if(Math.abs(dictionaryIC-MIC)>Math.abs(dictionaryIC-TMIC)){
-          MIC = TMIC
-          M = m
-          k = tk
+        var v2:Int = 0
+        if(v1 < 1.19 && v1 > 1/1.19){
+          v2 = 0
+        }else if(v1 >= 13.5){
+          v2 = 8
+        }else if(v1 <= 1/13.5){
+          v2 = -8
+        }else if(v1 > 1.19){
+          v2 = (v1*7/13.5).toInt
+        }else if(v1 < 1/1.19){
+          v2 = ((v1-1/13.5f)/((1/1.19f-1/13.5)/7f)-8f).toInt
         }
+        pyupypu(i)(j)=v2
       }
-      m += 1
     }
 
-    println(m)
-    println(k)
+    var ans= ""
+    while(m < cipherTextMessageLength){
+      k = new ListBuffer[Int]()
+      var sumpMatrix = Array.ofDim[Float](m,m)
+      if(cipherTextMessageLength%m==0){
+        println(m)
+        for(i <- 0 until m){
+          for(j <- 0 until m){
+            if(i == j) {
+              sumpMatrix(i)(j)= Float.MinValue
+            }else {
+              var sum:Float = 0.0f
+              for(z <- 0 until cipherTextMessageLength/m) {
+                sum+= pyupypu(cipherTextMessage.charAt(i*z).toInt-65)(cipherTextMessage.charAt(j*z).toInt-65)
+              }
+              sum /= cipherTextMessageLength/m
+              sumpMatrix(i)(j)= sum
+            }
+          }
+        }
+        for(i <- 0 until m){
+          var app = Float.MinValue
+          var indexu = 0
+          for(j <- 0 until m){
+            if(sumpMatrix(i)(j)>app){
+              app = sumpMatrix(i)(j)
+              indexu = j
+            }
+          }
+          k.append(indexu)
+        }
 
-    var plainText = permutationDecryption(cipherTextMessage, k)
+        plainText = permutationDecryption(cipherTextMessage, k)
+        println(s"$plainText\n")
+        println("La traduzione è accettabile?(si/no)\n")
+        ans = scala.io.StdIn.readLine()
+        if(ans=="si"){
+          m = cipherTextMessageLength
+        }
+      }
+      if(m > 3000){
+        m = cipherTextMessageLength
+      }else{
+        m += 1
+      }
+    }
 
-    println(plainText)
+    if(ans == "si") {
+      println(M)
+      println(k)
+      println(plainText)
+    }else{
+      println("Chiave non trovata")
+    }
 
   }
 }

@@ -12748,78 +12748,85 @@
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /root/.ivy2/cache
+[debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /root/.ivy2/cache
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (72ms)
 [debug] including url: jar:file:/root/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (67ms)
+[debug] settings loaded (123ms)
 [debug] 	default cache: /root/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
+[debug] settings loaded (131ms)
 [debug] 	default cache: /root/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
 [debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.scala-sbt#sbt;1.0.2!sbt.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-murmurhash_2.12;0.8.0!sjson-new-murmurhash_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#sbt;1.0.2!sbt.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main_2.12;1.0.2!main_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;1.0.2!test-agent.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#logic_2.12;1.0.2!logic_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-classfile_2.12;1.0.1!zinc-classfile_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#logic_2.12;1.0.2!logic_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#actions_2.12;1.0.2!actions_2.12.jar
 [debug] 	[NOT REQUIRED] com.jcraft#jsch;0.1.46!jsch.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#main-settings_2.12;1.0.2!main-settings_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#run_2.12;1.0.2!run_2.12.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#gigahorse-okhttp_2.12;0.3.0!gigahorse-okhttp_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#command_2.12;1.0.2!command_2.12.jar
 [debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp-urlconnection;3.7.0!okhttp-urlconnection.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#collections_2.12;1.0.2!collections_2.12.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#gigahorse-core_2.12;0.3.0!gigahorse-core_2.12.jar
 [debug] 	[NOT REQUIRED] com.squareup.okhttp3#okhttp;3.7.0!okhttp.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#actions_2.12;1.0.2!actions_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#main-settings_2.12;1.0.2!main-settings_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#run_2.12;1.0.2!run_2.12.jar
 [debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.2.2!ssl-config-core_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] org.scala-sbt#launcher-interface;1.0.0!launcher-interface.jar
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-api;2.8.1!log4j-api.jar
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#command_2.12;1.0.2!command_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#collections_2.12;1.0.2!collections_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.0!config.jar(bundle)
 [debug] 	[NOT REQUIRED] com.squareup.okio#okio;1.12.0!okio.jar
-[debug] 		tried https://repo.typesafe.com/typesafe/ivy-releases/org.apache.logging.log4j/log4j-core//2.8.1/test-jars/log4j-core-tests.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#launcher-interface;1.0.0!launcher-interface.jar
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-api;2.8.1!log4j-api.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile-core_2.12;1.0.1!zinc-compile-core_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.0.5!scala-parser-combinators_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-core_2.12;1.0.1!zinc-core_2.12.jar
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#zinc-persist_2.12;1.0.1!zinc-persist_2.12.jar
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar(test-jar)
 [debug] 	[NOT REQUIRED] com.trueaccord.scalapb#scalapb-runtime_2.12;0.6.0!scalapb-runtime_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbinary_2.12;0.4.4!sbinary_2.12.jar
 [debug] 	[NOT REQUIRED] com.trueaccord.lenses#lenses_2.12;0.4.12!lenses_2.12.jar
+[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-slf4j-impl;2.8.1!log4j-slf4j-impl.jar
 [debug] 	[NOT REQUIRED] com.lihaoyi#fastparse_2.12;0.4.2!fastparse_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#io_2.12;1.0.1!io_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#util-logging_2.12;1.0.1!util-logging_2.12.jar
 [debug] 	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.3.1!protobuf-java.jar(bundle)
 [debug] 	[NOT REQUIRED] com.lihaoyi#fastparse-utils_2.12;0.4.2!fastparse-utils_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-core_2.12;1.0.2!librarymanagement-core_2.12.jar
 [debug] 	[NOT REQUIRED] com.lihaoyi#sourcecode_2.12;0.1.3!sourcecode_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-ivy_2.12;1.0.2!librarymanagement-ivy_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;1.0.1!compiler-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#core-macros_2.12;1.0.2!core-macros_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile_2.12;1.0.1!zinc-compile_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#protocol_2.12;1.0.2!protocol_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd!ivy.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#util-relation_2.12;1.0.1!util-relation_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-scalajson_2.12;0.8.0!sjson-new-scalajson_2.12.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#util-position_2.12;1.0.1!util-position_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-sbt.ivy#ivy;2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd!ivy.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#sjson-new-core_2.12;0.8.0!sjson-new-core_2.12.jar
 [debug] 	[NOT REQUIRED] com.eed3si9n#shaded-scalajson_2.12;1.0.0-M4!shaded-scalajson_2.12.jar
 [debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.10.4!jawn-parser_2.12.jar
@@ -12838,24 +12845,7 @@
 [debug] 	[NOT REQUIRED] com.lmax#disruptor;3.3.6!disruptor.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.apache.logging.log4j/log4j-core/2.8.1/test-jars/log4j-core-tests.jar
-[debug] 		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.logging.log4j/log4j-core//2.8.1/test-jars/log4j-core-tests.jar
-[debug] CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.logging.log4j/log4j-core/2.8.1/test-jars/log4j-core-tests.jar
-[debug] 		tried /root/.ivy2/local/org.apache.logging.log4j/log4j-core//2.8.1/test-jars/log4j-core-tests.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1-tests.jar
-[info] downloading https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1-tests.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1-tests.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1-tests.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.8.1/log4j-core-2.8.1-tests.jar
-[info] 	[SUCCESSFUL ] org.apache.logging.log4j#log4j-core;2.8.1!log4j-core.jar(test-jar) (2304ms)
-[debug] 	[NOT REQUIRED] org.apache.logging.log4j#log4j-slf4j-impl;2.8.1!log4j-slf4j-impl.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#io_2.12;1.0.1!io_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#util-logging_2.12;1.0.1!util-logging_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-core_2.12;1.0.2!librarymanagement-core_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#librarymanagement-ivy_2.12;1.0.2!librarymanagement-ivy_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;1.0.1!compiler-interface.jar
-[debug] 	[NOT REQUIRED] org.scala-sbt#zinc-compile_2.12;1.0.1!zinc-compile_2.12.jar
-[debug] :: resolution report :: resolve 12252ms :: artifacts dl 5678ms
+[debug] :: resolution report :: resolve 14078ms :: artifacts dl 589ms
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT compile produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-compile.xml
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT runtime produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-runtime.xml
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT test produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-test.xml
@@ -12867,5 +12857,5 @@
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT plugin produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-plugin.xml
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT pom produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-pom.xml
 [debug] 	report for default#provascala-build;0.1-SNAPSHOT scala-tool produced in /root/IdeaProjects/provaScala/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-provascala-build-scala-tool.xml
-[debug] 	resolve done (12252ms resolve - 5678ms download)
+[debug] 	resolve done (14078ms resolve - 589ms download)
 [info] Done updating.

@@ -4,7 +4,7 @@
 		module="provascala$sources"
 		revision="0.1"
 		status="integration"
-		publication="20171003095522"
+		publication="20171108103342"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

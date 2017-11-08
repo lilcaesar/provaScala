@@ -281,42 +281,12 @@
 [debug] == resolving dependencies default#provascala$sources;0.1->jline#jline;2.14.4 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried /root/.ivy2/local/org.scala-lang/scala-library//2.12.3/srcs/scala-library-sources.jar
-[debug] 		tried /root/.ivy2/local/org.scala-lang.modules/scala-xml_2.12//1.0.6/srcs/scala-xml_2.12-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar.sha1
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.0.6/scala-xml_2.12-1.0.6-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src) (1621ms)
-[debug] 		tried /root/.ivy2/local/org.scala-lang/scala-compiler//2.12.3/srcs/scala-compiler-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.3/scala-compiler-2.12.3-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.3/scala-compiler-2.12.3-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.3/scala-compiler-2.12.3-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.3/scala-compiler-2.12.3-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.12.3/scala-compiler-2.12.3-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar(src) (37164ms)
-[debug] 		tried /root/.ivy2/local/jline/jline//2.14.4/srcs/jline-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/jline/jline/2.14.4/jline-2.14.4-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3-sources.jar.sha1
-[info] downloading https://repo1.maven.org/maven2/jline/jline/2.14.4/jline-2.14.4-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.4/jline-2.14.4-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.3/scala-library-2.12.3-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-library;2.12.3!scala-library.jar(src) (39146ms)
-[debug] 		tried /root/.ivy2/local/org.scala-lang/scala-reflect//2.12.3/srcs/scala-reflect-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/jline/jline/2.14.4/jline-2.14.4-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/jline/jline/2.14.4/jline-2.14.4-sources.jar
-[info] 	[SUCCESSFUL ] jline#jline;2.14.4!jline.jar(src) (1329ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.3/scala-reflect-2.12.3-sources.jar
-[info] 	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar(src) (1307ms)
-[debug] :: resolution report :: resolve 233ms :: artifacts dl 40468ms
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.3!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.3!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.3!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.4!jline.jar(src)
+[debug] :: resolution report :: resolve 424ms :: artifacts dl 16ms
 [debug] 	report for default#provascala$sources;0.1 compile produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-compile.xml
 [debug] 	report for default#provascala$sources;0.1 runtime produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-runtime.xml
 [debug] 	report for default#provascala$sources;0.1 test produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-test.xml
@@ -328,4 +298,4 @@
 [debug] 	report for default#provascala$sources;0.1 plugin produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-plugin.xml
 [debug] 	report for default#provascala$sources;0.1 pom produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-pom.xml
 [debug] 	report for default#provascala$sources;0.1 scala-tool produced in /root/IdeaProjects/provaScala/target/scala-2.12/resolution-cache/reports/default-provascala$sources-scala-tool.xml
-[debug] 	resolve done (233ms resolve - 40468ms download)
+[debug] 	resolve done (424ms resolve - 16ms download)
